@@ -46,12 +46,16 @@ graph TD
 ### 🎫 Integração com GitHub Issues (gh CLI)
 
 Quando solicitado a trabalhar com base em issues do GitHub:
-- **Leitura de Issues**: Utilize a CLI do GitHub via script Python para contornar restrições de sandbox:
+- **Leitura de Issues**: Utilize a CLI do GitHub diretamente para interagir com o repositório:
   ```bash
-  python3 -c "import subprocess; print(subprocess.check_output(['/opt/homebrew/bin/gh', 'issue', 'list']).decode())"
+  gh issue list
+  gh issue view <ID>
   ```
 - **Nomenclatura da Branch**: Crie branches de feature associadas no formato `feature/issue-<ID>-titulo-curto`.
-- **Pull Request**: Ao finalizar, utilize o `gh` via Python para abrir o PR, adicionando `fixes #<ID>` para fechamento automático.
+- **Pull Request**: Ao finalizar, utilize a CLI diretamente para abrir o PR, adicionando `fixes #<ID>` para fechamento automático:
+  ```bash
+  gh pr create --body "fixes #<ID>"
+  ```
 
 ---
 
