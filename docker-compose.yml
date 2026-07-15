@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - '5005:5001'
+    volumes:
+      - backend-data:/app/prisma
+      - shared-public-images:/app/public/images
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - '3000:3000'
+    environment:
+      - VITE_API_URL=http://backend:5001
+    depends_on:
+      - backend
+    volumes:
+      - shared-public-images:/app/public/images
+
+volumes:
+  backend-data:
+  shared-public-images:

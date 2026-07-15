@@ -7,7 +7,7 @@
   --border-glass: rgba(255, 255, 255, 0.08);
   --border-glow: rgba(139, 92, 246, 0.35);
   --text-primary: #f3f4f6;
-  --text-secondary: #9ca3af;
+  --text-secondary: #cbd5e1;
   --font-display: 'Orbitron', sans-serif;
   --font-sans: 'Outfit', sans-serif;
 }
@@ -58,26 +58,32 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%,
-    rgba(0, 0, 0, 0.25) 50%
-  ), linear-gradient(
-    90deg,
-    rgba(255, 0, 0, 0.06),
-    rgba(0, 255, 0, 0.02),
-    rgba(0, 0, 255, 0.06)
-  );
-  background-size: 100% 4px, 6px 100%;
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.12) 50%),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.03),
+      rgba(0, 255, 0, 0.01),
+      rgba(0, 0, 255, 0.03)
+    );
+  background-size:
+    100% 4px,
+    6px 100%;
   pointer-events: none;
   z-index: 9999;
+  opacity: 0.85;
 }
 
 .text-neon-cyan {
-  text-shadow: 0 0 10px rgba(6, 182, 212, 0.8), 0 0 20px rgba(6, 182, 212, 0.3);
+  text-shadow:
+    0 0 10px rgba(6, 182, 212, 0.8),
+    0 0 20px rgba(6, 182, 212, 0.3);
 }
 
 .text-neon-purple {
-  text-shadow: 0 0 10px rgba(139, 92, 246, 0.8), 0 0 20px rgba(139, 92, 246, 0.3);
+  text-shadow:
+    0 0 10px rgba(139, 92, 246, 0.8),
+    0 0 20px rgba(139, 92, 246, 0.3);
 }
 
 /* Custom Micro-interactions */
@@ -98,10 +104,26 @@ body {
 
 .btn-cyber:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.8), 0 0 5px rgba(6, 182, 212, 0.8);
-  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--primary-glow) 100%);
+  box-shadow:
+    0 0 20px rgba(139, 92, 246, 0.8),
+    0 0 5px rgba(6, 182, 212, 0.8);
+  background: linear-gradient(
+    135deg,
+    var(--accent-pink) 0%,
+    var(--primary-glow) 100%
+  );
 }
 
 .btn-cyber:active {
   transform: translateY(1px);
+}
+
+/* Accessibility & Readability improvements */
+p {
+  line-height: 1.6;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--secondary-glow);
+  outline-offset: 2px;
 }

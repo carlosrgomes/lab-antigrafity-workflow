@@ -18,6 +18,18 @@ const AppContent: React.FC = () => {
   const [selectedGameId, setSelectedGameId] = useState<string | null>(null);
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
   const [lastOrder, setLastOrder] = useState<any>(null);
+  const [crtEnabled, setCrtEnabled] = useState<boolean>(() => {
+    const saved = localStorage.getItem('crt_enabled');
+    return saved !== 'false';
+  });
+
+  const handleCrtToggle = () => {
+    setCrtEnabled((prev) => {
+      const next = !prev;
+      localStorage.setItem('crt_enabled', String(next));
+      return next;
+    });
+  };
 
   const handleNavigate = (page: string) => {
     setCurrentPage(page);
@@ -66,11 +78,13 @@ const AppContent: React.FC = () => {
 
   return (
     <div className="app-layout">
-      <div className="crt-overlay"></div>
+      {crtEnabled && <div className="crt-overlay"></div>}
       <Header
         onCartToggle={() => setIsCartOpen((prev) => !prev)}
         onNavigate={handleNavigate}
         currentPage={currentPage}
+        crtEnabled={crtEnabled}
+        onCrtToggle={handleCrtToggle}
       />
       <main className="app-main">{renderPage()}</main>
       <CartSidebar

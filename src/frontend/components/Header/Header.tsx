@@ -6,6 +6,8 @@ interface IHeaderProps {
   onCartToggle: () => void;
   onNavigate: (page: string) => void;
   currentPage: string;
+  crtEnabled: boolean;
+  onCrtToggle: () => void;
 }
 
 /**
@@ -18,6 +20,8 @@ export const Header: React.FC<IHeaderProps> = ({
   onCartToggle,
   onNavigate,
   currentPage,
+  crtEnabled,
+  onCrtToggle,
 }) => {
   const { totalItems, isAdmin, toggleAdmin } = useCart();
 
@@ -50,6 +54,19 @@ export const Header: React.FC<IHeaderProps> = ({
       </nav>
 
       <div className="header-actions">
+        <label
+          className="crt-toggle-label"
+          title="Toggle retro CRT scanlines overlay"
+        >
+          <input
+            type="checkbox"
+            checked={crtEnabled}
+            onChange={onCrtToggle}
+            className="crt-checkbox"
+          />
+          CRT EFFECT
+        </label>
+
         <button
           className={`btn-role ${isAdmin ? 'admin' : 'customer'}`}
           onClick={toggleAdmin}

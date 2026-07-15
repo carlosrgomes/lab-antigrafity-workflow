@@ -1,0 +1,18 @@
+FROM node:18-alpine
+
+RUN apk add --no-cache git openssl libc6-compat
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY prisma ./prisma
+RUN npx prisma generate
+
+COPY . .
+
+EXPOSE 5001
+
+CMD ["sh", "-c", "npx prisma db push && npx tsx prisma/seed.ts && npx tsx src/backend/scripts/download-images.ts && npx tsx src/backend/server.ts"]
