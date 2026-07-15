@@ -1,0 +1,53 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["jsdoc"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsdoc/recommended-typescript"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": "warn",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "max-lines-per-function": ["error", { "max": 25, "skipBlankLines": true, "skipComments": true }],
+    "complexity": ["error", 5],
+    "max-params": ["error", 3],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": true
+        }
+      }
+    ],
+    "jsdoc/require-jsdoc": [
+      "error",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true,
+          "ArrowFunctionExpression": false,
+          "FunctionExpression": false
+        }
+      }
+    ],
+    "jsdoc/require-description": ["error", { "contexts": ["any"] }]
+  },
+  "overrides": [
+    {
+      "files": ["src/__tests__/**/*.ts", "**/*.test.ts"],
+      "rules": {
+        "max-lines-per-function": "off",
+        "jsdoc/require-jsdoc": "off"
+      }
+    }
+  ]
+}

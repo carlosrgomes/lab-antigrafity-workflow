@@ -1,0 +1,49 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Game {
+  id          String       @id @default(uuid())
+  title       String
+  description String
+  price       Float
+  rarity      String       // Common, Rare, UltraRare
+  console     String       // NES, SNES, MegaDrive, PS1, N64, GameBoy
+  stock       Int
+  imageUrl    String
+  condition   String       // Mint, Good, CIB
+  developer   String
+  releaseYear Int
+  screenshots Screenshot[]
+  orderItems  OrderItem[]
+}
+
+model Screenshot {
+  id     String @id @default(uuid())
+  url    String
+  gameId String
+  game   Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+}
+
+model Order {
+  id        String      @id @default(uuid())
+  total     Float
+  status    String      // PENDING, COMPLETED
+  items     OrderItem[]
+  createdAt DateTime    @default(now())
+}
+
+model OrderItem {
+  id       String @id @default(uuid())
+  gameId   String
+  orderId  String
+  quantity Int
+  price    Float
+  game     Game   @relation(fields: [gameId], references: [id])
+  order    Order  @relation(fields: [orderId], references: [id], onDelete: Cascade)
+}
