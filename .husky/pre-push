@@ -1,1 +1,1 @@
-node pre-push.js
+node pre-push.cjs
