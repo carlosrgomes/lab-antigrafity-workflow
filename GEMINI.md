@@ -6,6 +6,18 @@ Como um agente Gemini atuando neste workspace, você **deve** seguir estritament
 
 ---
 
+## 🚀 Inicialização Automática do Projeto
+
+> [!IMPORTANT]
+> **Tarefa Inicial Obrigatória:**
+> Se o arquivo `package.json` ou as configurações (`tsconfig.json`, `.eslintrc.json`) **não existirem** no diretório raiz do projeto, a sua primeira ação deve ser obrigatoriamente inicializar o projeto a partir do template, realizando os seguintes passos de forma autônoma antes de prosseguir com qualquer outra tarefa solicitada pelo usuário:
+> 1. Criar o `package.json` com os scripts e dependências do template.
+> 2. Criar os arquivos de configuração `.eslintrc.json`, `.prettierrc`, `tsconfig.json` e `jest.config.js` descritos no [README.md](file:///Users/carlosbarbero/projetos/pessoal/git-pre-push/README.md).
+> 3. Executar `npm install` no diretório raiz do projeto.
+> 4. Garantir que o pre-push está executável (`chmod +x .husky/pre-push`).
+
+---
+
 > [!IMPORTANT]
 > **REGRA DE OURO DO REPOSITÓRIO:**
 > **Nunca faça push direto na branch `main` ou `master`.** 
