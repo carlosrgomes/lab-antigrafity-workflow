@@ -14,9 +14,11 @@ O objetivo principal deste template é garantir que nenhum código seja enviado 
 │   ├── agents/                 # Definição e personas de agentes IA
 │   │   ├── backend-engineer.md # Diretrizes de backend para IAs
 │   │   └── frontend-engineer.md# Diretrizes de design e UI para IAs
-│   ├── skills/                 # Habilidades e padrões de código reutilizáveis por IAs
-│   │   ├── nodejs-backend/     # Padrões e arquiteturas de API
-│   │   └── nodejs-frontend/    # Padrões visuais CSS, animações e responsividade
+│   └── skills/                 # Habilidades e padrões de código reutilizáveis por IAs
+│       ├── nodejs-backend/     # Padrões e arquiteturas de API
+│       └── nodejs-frontend/    # Padrões visuais CSS, animações e responsividade
+│
+├── spec/                       # Especificações e requisitos do sistema
 │   └── spec-retro-ecommerce.md # Especificação completa do E-commerce de Games Retrô
 │
 ├── .husky/                     # Pasta pública do Husky que instala os ganchos do Git
@@ -226,6 +228,6 @@ module.exports = {
 
 Qualquer agente autônomo de IA que for atuar no desenvolvimento deste projeto deve se basear nos guias em:
 * [GEMINI.md](file:///Users/carlosbarbero/projetos/pessoal/git-pre-push/GEMINI.md) — As regras de governança de ciclo de vida.
-* [`.agents/spec-retro-ecommerce.md`](file:///Users/carlosbarbero/projetos/pessoal/git-pre-push/.agents/spec-retro-ecommerce.md) — As regras e requisitos do produto a ser construído.
+* [`spec/spec-retro-ecommerce.md`](file:///Users/carlosbarbero/projetos/pessoal/git-pre-push/spec/spec-retro-ecommerce.md) — As regras e requisitos do produto a ser construído.
 * [`.agents/agents/`](file:///Users/carlosbarbero/projetos/pessoal/git-pre-push/.agents/agents/) — Personas dos desenvolvedores de Backend e Frontend.
 * [`.agents/skills/`](file:///Users/carlosbarbero/projetos/pessoal/git-pre-push/.agents/skills/) — Habilidades e boas práticas específicas das camadas do sistema.

@@ -31,7 +31,7 @@ Para implementar qualquer nova funcionalidade ou correção:
 
 ```mermaid
 graph TD
-    A[Identificar Requisito] --> B[Criar/Ler Especificação spec-*.md em .agents/]
+    A[Identificar Requisito] --> B[Criar/Ler Especificação spec-*.md em spec/]
     B --> C[Criar Plano de Implementação /plan]
     C --> D[Obter Aprovação do Usuário]
     D --> E[Criar Branch de Feature feature/*]
@@ -40,7 +40,7 @@ graph TD
     G --> H[Criar Pull Request para main]
 ```
 
-1. **Consulta de Especificações**: Antes de alterar ou criar códigos de uma feature, leia os arquivos de especificação na pasta [`.agents/`](file:///Users/carlosbarbero/projetos/pessoal/git-pre-push/.agents/).
+1. **Consulta de Especificações**: Antes de alterar ou criar códigos de uma feature, leia os arquivos de especificação na pasta [`spec/`](file:///Users/carlosbarbero/projetos/pessoal/git-pre-push/spec/).
 2. **Padrão OOP & Qualidade**: Todo código escrito deve respeitar os limites de 25 linhas por método/função, complexidade máxima de 5 e conter comentários documentados em formato JSDoc.
 
 ---
