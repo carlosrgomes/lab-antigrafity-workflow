@@ -62,6 +62,16 @@ graph TD
 
 ## 🚀 Como Iniciar um Projeto do Zero a partir deste Template
 
+### ⚡ Inicialização Automática via Agente de IA
+
+Se você utilizar um agente autônomo (como o Antigravity) para desenvolver o projeto neste repositório, **você não precisa fazer o setup manual descrito abaixo**. 
+
+Conforme definido em [GEMINI.md](file:///Users/carlosbarbero/projetos/pessoal/git-pre-push/GEMINI.md), o agente detectará automaticamente se as configurações do projeto estão ausentes no carregamento do workspace e executará autonomamente todas as etapas de criação de arquivos e instalação de dependências antes de iniciar a sua primeira tarefa!
+
+### 🛠️ Inicialização Manual
+
+Se preferir realizar as etapas manualmente:
+
 ### 1. Clonar e Inicializar o Projeto Node.js
 Primeiro, instale as dependências básicas no seu ambiente:
 ```bash
