@@ -36,7 +36,8 @@ export const Catalog: React.FC<ICatalogProps> = ({ onSelectGame }) => {
     let url = '/api/games';
     const params = [];
     if (search) params.push(`q=${encodeURIComponent(search)}`);
-    if (selectedConsole) params.push(`console=${encodeURIComponent(selectedConsole)}`);
+    if (selectedConsole)
+      params.push(`console=${encodeURIComponent(selectedConsole)}`);
 
     if (params.length > 0) {
       url += `?${params.join('&')}`;
@@ -85,15 +86,21 @@ export const Catalog: React.FC<ICatalogProps> = ({ onSelectGame }) => {
             >
               ALL SYSTEMS
             </button>
-            {['NES', 'SNES', 'MegaDrive', 'PS1', 'N64', 'GameBoy'].map((sys) => (
-              <button
-                key={sys}
-                className={`console-btn ${selectedConsole === sys ? 'active' : ''}`}
-                onClick={() => setSelectedConsole(sys)}
-              >
-                {sys === 'MegaDrive' ? 'MEGA DRIVE' : sys === 'GameBoy' ? 'GAME BOY' : sys}
-              </button>
-            ))}
+            {['NES', 'SNES', 'MegaDrive', 'PS1', 'N64', 'GameBoy', 'PSP'].map(
+              (sys) => (
+                <button
+                  key={sys}
+                  className={`console-btn ${selectedConsole === sys ? 'active' : ''}`}
+                  onClick={() => setSelectedConsole(sys)}
+                >
+                  {sys === 'MegaDrive'
+                    ? 'MEGA DRIVE'
+                    : sys === 'GameBoy'
+                      ? 'GAME BOY'
+                      : sys}
+                </button>
+              ),
+            )}
           </div>
         </div>
 
@@ -121,11 +128,7 @@ export const Catalog: React.FC<ICatalogProps> = ({ onSelectGame }) => {
         ) : (
           <div className="catalog-grid">
             {filteredGames.map((game) => (
-              <GameCard
-                key={game.id}
-                game={game}
-                onSelectGame={onSelectGame}
-              />
+              <GameCard key={game.id} game={game} onSelectGame={onSelectGame} />
             ))}
           </div>
         )}

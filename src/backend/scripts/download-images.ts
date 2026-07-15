@@ -41,6 +41,30 @@ const GAME_MAPPING: Record<string, IMapping> = {
     repoSystem: 'Nintendo_-_Game_Boy',
     libretroFilename: 'Pokemon - Red Version (USA, Europe) (SGB Enhanced)',
   },
+  'Crash Bandicoot': {
+    repoSystem: 'Sony_-_PlayStation',
+    libretroFilename: 'Crash Bandicoot (USA)',
+  },
+  'Metal Gear Solid': {
+    repoSystem: 'Sony_-_PlayStation',
+    libretroFilename: 'Metal Gear Solid (USA) (Disc 1)',
+  },
+  'Resident Evil 2': {
+    repoSystem: 'Sony_-_PlayStation',
+    libretroFilename: 'Resident Evil 2 (USA) (Disc 1)',
+  },
+  'Crisis Core - Final Fantasy VII': {
+    repoSystem: 'Sony_-_PlayStation_Portable',
+    libretroFilename: 'Crisis Core - Final Fantasy VII (USA)',
+  },
+  'God of War - Chains of Olympus': {
+    repoSystem: 'Sony_-_PlayStation_Portable',
+    libretroFilename: 'God of War - Chains of Olympus (USA)',
+  },
+  'Grand Theft Auto - Chinatown Wars': {
+    repoSystem: 'Sony_-_PlayStation_Portable',
+    libretroFilename: 'Grand Theft Auto - Chinatown Wars (USA)',
+  },
 };
 
 /**
