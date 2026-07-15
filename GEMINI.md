@@ -33,15 +33,15 @@ Para implementar qualquer nova funcionalidade ou correção:
 graph TD
     A[Identificar Requisito] --> B[Criar/Ler Especificação spec-*.md em spec/]
     B --> C[Criar Plano de Implementação /plan]
-    C --> D[Obter Aprovação do Usuário]
-    D --> E[Criar Branch de Feature feature/*]
-    E --> F[Escrever Código com Testes Unitários]
-    F --> G[Validar Localmente via npm run lint / test]
-    G --> H[Criar Pull Request para main]
+    C --> D[Criar Branch de Feature feature/*]
+    D --> E[Escrever Código com Testes Unitários]
+    E --> F[Validar Localmente via npm run lint / test]
+    F --> G[Criar Pull Request para main]
 ```
 
-1. **Consulta de Especificações**: Antes de alterar ou criar códigos de uma feature, leia os arquivos de especificação na pasta [`spec/`](file:///Users/carlosbarbero/projetos/pessoal/git-pre-push/spec/).
-2. **Padrão OOP & Qualidade**: Todo código escrito deve respeitar os limites de 25 linhas por método/função, complexidade máxima de 5 e conter comentários documentados em formato JSDoc.
+1. **Autonomia Completa**: O agente tem autorização total para planejar, codificar, executar comandos e validar sem a necessidade de pausar o fluxo para obter aprovações ou confirmações interativas do usuário.
+2. **Consulta de Especificações**: Antes de alterar ou criar códigos de uma feature, leia os arquivos de especificação na pasta [`spec/`](file:///Users/carlosbarbero/projetos/pessoal/git-pre-push/spec/).
+3. **Padrão OOP & Qualidade**: Todo código escrito deve respeitar os limites de 25 linhas por método/função, complexidade máxima de 5 e conter comentários documentados em formato JSDoc.
 
 ---
 
@@ -52,6 +52,7 @@ Adotamos uma versão simplificada do Gitflow para gerenciamento de versões e la
 ### 1. Funcionalidades (`feature/*`)
 * Criadas a partir de `main` para desenvolvimento de novas tarefas.
 * Nomeclatura: `feature/nome-da-tarefa` (ex: `feature/cart-animation`).
+* **Sempre subir a branch criada para o repositório remoto** (`git push origin feature/nome-da-tarefa`) logo após a sua criação ou ao realizar commits.
 * Finalizada por meio de Pull Request (PR) direcionado à branch `main`.
 
 ### 2. Lançamentos de Versão (`release/*`)

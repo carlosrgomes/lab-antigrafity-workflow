@@ -44,6 +44,10 @@ graph TD
 * Formulário de preenchimento elegante (detalhes de pagamento fictícios).
 * Confirmação de pedido com animação de "Fim de Jogo" (*Victory Screen* ou *Stage Clear* em pixel-art).
 
+### 5. Download Automático de Imagens/Thumbnails (Sem Interação Manual)
+* Para garantir a fidelidade visual sem exigir uploads manuais ou processos interativos de aprovação, o sistema deve conter um script automatizado de download que baixa as imagens dos jogos (boxart, screenshots, etc.) diretamente a partir do repositório Git [libretro-thumbnails](https://github.com/libretro-thumbnails/libretro-thumbnails).
+* O script deve mapear os títulos dos jogos cadastrados no banco de dados e obter de forma autônoma as imagens correspondentes no repositório correspondente de cada console (ex: NES, SNES, Sega), garantindo inicialização 100% autônoma e sem necessidade de interação do usuário para aprovação.
+
 ---
 
 ## 🛠️ Arquitetura Técnica
