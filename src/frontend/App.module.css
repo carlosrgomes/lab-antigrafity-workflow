@@ -1,0 +1,100 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  border-radius: 0;
+  border-bottom: 1px solid var(--glass-border);
+  background: rgba(10, 10, 12, 0.85);
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 16px 20px;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.logoIcon {
+  color: var(--secondary-neon);
+  filter: drop-shadow(0 0 5px rgba(6, 182, 212, 0.5));
+}
+
+.logoText {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.cartIconBtn {
+  position: relative;
+  background: var(--bg-tertiary);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cartIconBtn:hover {
+  border-color: var(--primary-neon);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--accent-neon);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.5px;
+}
