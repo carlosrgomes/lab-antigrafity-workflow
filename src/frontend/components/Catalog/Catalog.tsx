@@ -86,21 +86,28 @@ export const Catalog: React.FC<ICatalogProps> = ({ onSelectGame }) => {
             >
               ALL SYSTEMS
             </button>
-            {['NES', 'SNES', 'MegaDrive', 'PS1', 'N64', 'GameBoy', 'PSP'].map(
-              (sys) => (
-                <button
-                  key={sys}
-                  className={`console-btn ${selectedConsole === sys ? 'active' : ''}`}
-                  onClick={() => setSelectedConsole(sys)}
-                >
-                  {sys === 'MegaDrive'
-                    ? 'MEGA DRIVE'
-                    : sys === 'GameBoy'
-                      ? 'GAME BOY'
-                      : sys}
-                </button>
-              ),
-            )}
+            {[
+              'NES',
+              'SNES',
+              'MegaDrive',
+              'PS1',
+              'PS2',
+              'N64',
+              'GameBoy',
+              'PSP',
+            ].map((sys) => (
+              <button
+                key={sys}
+                className={`console-btn ${selectedConsole === sys ? 'active' : ''}`}
+                onClick={() => setSelectedConsole(sys)}
+              >
+                {sys === 'MegaDrive'
+                  ? 'MEGA DRIVE'
+                  : sys === 'GameBoy'
+                    ? 'GAME BOY'
+                    : sys}
+              </button>
+            ))}
           </div>
         </div>
 

@@ -24,7 +24,9 @@ export const AdminPanel: React.FC<IAdminPanelProps> = ({ onBack }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
-  const [rarity, setRarity] = useState<'Common' | 'Rare' | 'UltraRare'>('Common');
+  const [rarity, setRarity] = useState<'Common' | 'Rare' | 'UltraRare'>(
+    'Common',
+  );
   const [consoleName, setConsoleName] = useState('SNES');
   const [stock, setStock] = useState('10');
   const [condition, setCondition] = useState('CIB');
@@ -128,8 +130,10 @@ export const AdminPanel: React.FC<IAdminPanelProps> = ({ onBack }) => {
                 <option value="SNES">SNES</option>
                 <option value="MegaDrive">Mega Drive</option>
                 <option value="PS1">PlayStation 1</option>
+                <option value="PS2">PlayStation 2</option>
                 <option value="N64">Nintendo 64</option>
                 <option value="GameBoy">Game Boy</option>
+                <option value="PSP">PlayStation Portable</option>
               </select>
             </div>
           </div>

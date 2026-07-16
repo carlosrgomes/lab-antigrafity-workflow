@@ -47,7 +47,7 @@ const GAME_MAPPING: Record<string, IMapping> = {
   },
   'Metal Gear Solid': {
     repoSystem: 'Sony_-_PlayStation',
-    libretroFilename: 'Metal Gear Solid (USA) (Disc 1)',
+    libretroFilename: 'Metal Gear Solid (USA)',
   },
   'Resident Evil 2': {
     repoSystem: 'Sony_-_PlayStation',
@@ -64,6 +64,26 @@ const GAME_MAPPING: Record<string, IMapping> = {
   'Grand Theft Auto - Chinatown Wars': {
     repoSystem: 'Sony_-_PlayStation_Portable',
     libretroFilename: 'Grand Theft Auto - Chinatown Wars (USA)',
+  },
+  'Grand Theft Auto: San Andreas': {
+    repoSystem: 'Sony_-_PlayStation_2',
+    libretroFilename: 'Grand Theft Auto - San Andreas (USA) (v3.00)',
+  },
+  'Resident Evil 4': {
+    repoSystem: 'Sony_-_PlayStation_2',
+    libretroFilename: 'Resident Evil 4 (USA)',
+  },
+  'Shadow of the Colossus': {
+    repoSystem: 'Sony_-_PlayStation_2',
+    libretroFilename: 'Shadow of the Colossus (USA)',
+  },
+  'God of War II': {
+    repoSystem: 'Sony_-_PlayStation_2',
+    libretroFilename: 'God of War II (USA)',
+  },
+  'Silent Hill 2': {
+    repoSystem: 'Sony_-_PlayStation_2',
+    libretroFilename: 'Silent Hill 2 (Europe) (En,Ja,Fr,De,Es,It)',
   },
 };
 
